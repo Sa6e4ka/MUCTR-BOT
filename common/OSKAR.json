@@ -1,0 +1,1066 @@
+{
+    "courses": [
+        {
+            "number": 1,
+            "semesters": [
+                {
+                    "name": "осенний",
+                    "subjects": [
+                        {
+                            "subject_name": "Иностранный язык",
+                            "reload": false,
+                            "rating": 50.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 50.0,
+                            "text_rating": "зачтено",
+                            "control_type": "зачет",
+                            "additional": 18.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "5fc5d2ee-53e6-44d4-bea8-4ba997876655",
+                                    "value": 2.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "5fc5d2ee-53e6-44d4-bea8-4ba997876655",
+                                    "value": 30.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Философия",
+                            "reload": false,
+                            "rating": 62.0,
+                            "exam": 28.0,
+                            "rating_in_semester": 34.0,
+                            "text_rating": "удовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 10.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "19fc423a-2b98-48b4-9a0c-e3e5617a4a9d",
+                                    "value": 3.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "19fc423a-2b98-48b4-9a0c-e3e5617a4a9d",
+                                    "value": 12.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "19fc423a-2b98-48b4-9a0c-e3e5617a4a9d",
+                                    "value": 9.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Общая и неорганическая химия",
+                            "reload": false,
+                            "rating": 16.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 16.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "08c72207-e416-4581-b14b-371a94505c67",
+                                    "value": 5.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "08c72207-e416-4581-b14b-371a94505c67",
+                                    "value": 11.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Математика",
+                            "reload": false,
+                            "rating": 30.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 30.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "020ffdbb-54f3-4e1d-8b36-6fe37d0a444f",
+                                    "value": 6.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "020ffdbb-54f3-4e1d-8b36-6fe37d0a444f",
+                                    "value": 14.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "020ffdbb-54f3-4e1d-8b36-6fe37d0a444f",
+                                    "value": 10.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Физическая культура и спорт",
+                            "reload": false,
+                            "rating": 54.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 54.0,
+                            "text_rating": "зачтено",
+                            "control_type": "зачет",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "a97ef827-f76e-468b-b941-24548b162122",
+                                    "value": 6.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "a97ef827-f76e-468b-b941-24548b162122",
+                                    "value": 48.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Управление проектами",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Основы информационных технологий",
+                            "reload": false,
+                            "rating": 61.0,
+                            "exam": 31.0,
+                            "rating_in_semester": 30.0,
+                            "text_rating": "удовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "26e1e540-18aa-48df-b49e-73c43752bf87",
+                                    "value": 8.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "26e1e540-18aa-48df-b49e-73c43752bf87",
+                                    "value": 22.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Элективные дисциплины по физической культуре и спорту",
+                            "reload": false,
+                            "rating": 8.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 8.0,
+                            "text_rating": "не зачтено",
+                            "control_type": "зачет",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "a97ef827-f76e-468b-b941-24548b162122",
+                                    "value": 8.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Элективная дисциплина",
+                            "reload": false,
+                            "rating": 43.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 43.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "99cd4623-6bad-4807-9048-2ea04d5b64f0",
+                                    "value": 6.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "99cd4623-6bad-4807-9048-2ea04d5b64f0",
+                                    "value": 15.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "99cd4623-6bad-4807-9048-2ea04d5b64f0",
+                                    "value": 21.5,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Инженерная графика и цифровое проектирование (CAD)",
+                            "reload": false,
+                            "rating": 70.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 70.0,
+                            "text_rating": "хорошо",
+                            "control_type": "зачет с оценкой",
+                            "additional": 33.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "b13ecb96-acff-4423-bf14-5c137f7dcef8",
+                                    "value": 12.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "b13ecb96-acff-4423-bf14-5c137f7dcef8",
+                                    "value": 13.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "b13ecb96-acff-4423-bf14-5c137f7dcef8",
+                                    "value": 12.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        }
+                    ]
+                },
+                {
+                    "name": "весенний",
+                    "subjects": [
+                        {
+                            "subject_name": "Иностранный язык",
+                            "reload": false,
+                            "rating": 62.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 62.0,
+                            "text_rating": "зачтено",
+                            "control_type": "зачет",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "e5a311f2-84e5-481a-b724-d66f263c4404",
+                                    "value": 18.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "e5a311f2-84e5-481a-b724-d66f263c4404",
+                                    "value": 24.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "e5a311f2-84e5-481a-b724-d66f263c4404",
+                                    "value": 20.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Общая и неорганическая химия",
+                            "reload": false,
+                            "rating": 2.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 2.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "08c72207-e416-4581-b14b-371a94505c67",
+                                    "value": 2.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Математика",
+                            "reload": false,
+                            "rating": 2.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 2.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "57c5da81-6774-4126-8336-e20ba556efb7",
+                                    "value": 0.5,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "57c5da81-6774-4126-8336-e20ba556efb7",
+                                    "value": 1.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Управление проектами",
+                            "reload": false,
+                            "rating": 75.0,
+                            "exam": 25.0,
+                            "rating_in_semester": 50.0,
+                            "text_rating": "хорошо",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "5519828d-6b24-47f5-8800-e3ab59cc913b",
+                                    "value": 12.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "5519828d-6b24-47f5-8800-e3ab59cc913b",
+                                    "value": 10.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "5519828d-6b24-47f5-8800-e3ab59cc913b",
+                                    "value": 28.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Элективные дисциплины по физической культуре и спорту",
+                            "reload": false,
+                            "rating": 2.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 2.0,
+                            "text_rating": "не зачтено",
+                            "control_type": "зачет",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "a97ef827-f76e-468b-b941-24548b162122",
+                                    "value": 2.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Элективная дисциплина",
+                            "reload": false,
+                            "rating": 70.0,
+                            "exam": 34.0,
+                            "rating_in_semester": 36.0,
+                            "text_rating": "хорошо",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "99cd4623-6bad-4807-9048-2ea04d5b64f0",
+                                    "value": 12.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "99cd4623-6bad-4807-9048-2ea04d5b64f0",
+                                    "value": 12.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "99cd4623-6bad-4807-9048-2ea04d5b64f0",
+                                    "value": 12.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Инженерная графика и цифровое проектирование (CAD)",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Органическая химия",
+                            "reload": false,
+                            "rating": 8.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 8.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "773ea360-f046-4ba4-8fe2-72626bffbaa2",
+                                    "value": 3.8,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "773ea360-f046-4ba4-8fe2-72626bffbaa2",
+                                    "value": 1.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "773ea360-f046-4ba4-8fe2-72626bffbaa2",
+                                    "value": 2.9,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Профильное программное обеспечение для решения задач профессиональной деятельности",
+                            "reload": false,
+                            "rating": 90.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 90.0,
+                            "text_rating": "зачтено",
+                            "control_type": "зачет",
+                            "additional": 33.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "88a2bdd4-2208-4902-93eb-4d209b5e2a6c",
+                                    "value": 18.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "88a2bdd4-2208-4902-93eb-4d209b5e2a6c",
+                                    "value": 19.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "88a2bdd4-2208-4902-93eb-4d209b5e2a6c",
+                                    "value": 20.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Гражданская защита в чрезвычайных ситуациях",
+                            "reload": false,
+                            "rating": 59.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 59.0,
+                            "text_rating": "зачтено",
+                            "control_type": "зачет",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "8b1baf7a-e678-45c8-81e2-4b6690173fb2",
+                                    "value": 36.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "8b1baf7a-e678-45c8-81e2-4b6690173fb2",
+                                    "value": 23.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "История (история России, всеобщая история)",
+                            "reload": false,
+                            "rating": 22.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 22.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "a112471a-da2f-4a96-81c3-9662ce1b67e0",
+                                    "value": 4.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "a112471a-da2f-4a96-81c3-9662ce1b67e0",
+                                    "value": 10.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "a112471a-da2f-4a96-81c3-9662ce1b67e0",
+                                    "value": 8.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Физика",
+                            "reload": false,
+                            "rating": 60.0,
+                            "exam": 10.0,
+                            "rating_in_semester": 50.0,
+                            "text_rating": "удовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "fc49da7e-f0fa-44e8-afaf-a7b729804909",
+                                    "value": 9.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "fc49da7e-f0fa-44e8-afaf-a7b729804909",
+                                    "value": 41.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Прикладная и вычислительная механика (CAE)",
+                            "reload": false,
+                            "rating": 21.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 21.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "20fe4b3b-3b6c-4f47-a376-7a281de40abc",
+                                    "value": 12.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "20fe4b3b-3b6c-4f47-a376-7a281de40abc",
+                                    "value": 6.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": "20fe4b3b-3b6c-4f47-a376-7a281de40abc",
+                                    "value": 3.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "number": 2,
+            "semesters": [
+                {
+                    "name": "осенний",
+                    "subjects": [
+                        {
+                            "subject_name": "Иностранный язык",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "не зачтено",
+                            "control_type": "зачет",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Математика",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Элективные дисциплины по физической культуре и спорту",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "не зачтено",
+                            "control_type": "зачет",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Элективная дисциплина",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Органическая химия",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Физика",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "экзамен",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "f50fea8d-ee21-4219-af96-87d185cbd6c6",
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Аналитическая химия",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Лабораторный практикум по органической химии",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "65411440-5b55-40bb-9fb7-6bfee2ededb1",
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Инженерный  проект",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Вычислительная механика (CAE)",
+                            "reload": false,
+                            "rating": 0.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 0.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        },
+                        {
+                            "subject_name": "Правоведение",
+                            "reload": false,
+                            "rating": 6.0,
+                            "exam": 0.0,
+                            "rating_in_semester": 6.0,
+                            "text_rating": "неудовлетворительно",
+                            "control_type": "зачет с оценкой",
+                            "additional": 0.0,
+                            "medium_control": [
+                                {
+                                    "teacher": "57e2b760-148c-4551-896c-9b1c1d498e85",
+                                    "value": 6.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                },
+                                {
+                                    "teacher": null,
+                                    "value": 0.0,
+                                    "comment": null
+                                }
+                            ],
+                            "is_individual": false,
+                            "mottled": false,
+                            "half": null
+                        }
+                    ]
+                },
+                {
+                    "name": "весенний",
+                    "subjects": []
+                }
+            ]
+        },
+        {
+            "number": 3,
+            "semesters": [
+                {
+                    "name": "осенний",
+                    "subjects": []
+                },
+                {
+                    "name": "весенний",
+                    "subjects": []
+                }
+            ]
+        }
+    ]
+}

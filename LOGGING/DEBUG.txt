@@ -1,0 +1,333 @@
+--------
+23-02-2024 22:14
+INFO
+Новый пользователь: PurpleguyDX
+--------
+--------
+23-02-2024 22:14
+INFO
+Новый пользователь: PurpleguyDX
+--------
+--------
+23-02-2024 22:14
+INFO
+Пользователь PurpleguyDX случайно ввел команду при регистрации
+--------
+--------
+23-02-2024 22:14
+INFO
+Пользователь PurpleguyDX случайно ввел команду при регистрации
+--------
+--------
+23-02-2024 22:15
+INFO
+Новый пользователь: PurpleguyDX
+--------
+--------
+23-02-2024 22:15
+INFO
+Новый пользователь: PurpleguyDX
+--------
+--------
+23-02-2024 22:16
+INFO
+Новый пользователь: PurpleguyDX
+--------
+--------
+23-02-2024 22:16
+INFO
+Новый пользователь: PurpleguyDX
+--------
+--------
+23-02-2024 22:16
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+23-02-2024 22:16
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+23-02-2024 22:21
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+23-02-2024 22:21
+DEBUG
+Пользователь NeBot100Proz неправильно ввел данные: 'educations'
+--------
+--------
+23-02-2024 22:21
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+23-02-2024 22:23
+INFO
+Пользователь NeBot100Proz решил воспользоваться другой командой в состоянии просмотра журнала.
+--------
+--------
+23-02-2024 22:32
+INFO
+Новый пользователь: PurpleguyDX
+--------
+--------
+23-02-2024 22:32
+DEBUG
+Пользователь shittykidnepp воспользовался /viewhomework, не введя данные
+--------
+--------
+23-02-2024 22:37
+DEBUG
+Пользователь svetik_stav решил воспользоваться командой /journal, не введя данные
+--------
+--------
+23-02-2024 22:37
+INFO
+Новый пользователь: svetik_stav
+--------
+--------
+23-02-2024 22:37
+DEBUG
+Пользователь Marichkinc воспользовался /viewhomework, не введя данные
+--------
+--------
+23-02-2024 22:37
+INFO
+Новый пользователь: Marichkinc
+--------
+--------
+23-02-2024 22:40
+DEBUG
+Пользователь sh4vvtycr33p воспользовался /viewhomework, не введя данные
+--------
+--------
+23-02-2024 22:40
+INFO
+Новый пользователь: sh4vvtycr33p
+--------
+--------
+23-02-2024 22:41
+INFO
+Пользователь sh4vvtycr33p решил воспользоваться другой командой в состоянии просмотра журнала.
+--------
+--------
+23-02-2024 22:50
+INFO
+Пользователь svetik_stav решил воспользоваться другой командой в состоянии просмотра журнала.
+--------
+--------
+24-02-2024 19:02
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+24-02-2024 19:02
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+24-02-2024 19:34
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+24-02-2024 19:34
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 16:25
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:12
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:13
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:14
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:16
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:18
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:19
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:19
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:20
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:20
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:20
+ERROR
+Ошибка в запросе к sql: Invalid SQLite URL: sqlite+aiosqlite://database/base.db
+Valid SQLite URL forms are:
+ sqlite:///:memory: (or, sqlite://)
+ sqlite:///relative/path/to/file.db
+ sqlite:////absolute/path/to/file.db
+--------
+--------
+25-02-2024 23:20
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+--------
+--------
+25-02-2024 23:21
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:23
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:23
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:24
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:24
+ERROR
+Ошибка в запросе к sql: Could not parse SQLAlchemy URL from string 'DB_LITE=sqlite+aiosqlite:///database/base.db'
+--------
+--------
+25-02-2024 23:24
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+--------
+--------
+25-02-2024 23:25
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:25
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:25
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:26
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:54
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:55
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+25-02-2024 23:59
+ERROR
+Ошибка в запросе к sql: Invalid SQLite URL: sqlite+aiosqlite://database/base.db
+Valid SQLite URL forms are:
+ sqlite:///:memory: (or, sqlite://)
+ sqlite:///relative/path/to/file.db
+ sqlite:////absolute/path/to/file.db
+--------
+--------
+25-02-2024 23:59
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+--------
+--------
+26-02-2024 00:00
+ERROR
+Ошибка в запросе к sql: (unicode error) 'unicodeescape' codec can't decode bytes in position 23-24: truncated \UXXXXXXXX escape (engine.py, line 5)
+--------
+--------
+26-02-2024 00:00
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+--------
+--------
+26-02-2024 00:00
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+26-02-2024 00:01
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+26-02-2024 00:02
+DEBUG
+Пользователь NeBot100Proz воспользовался /schedule, не введя данные
+--------
+--------
+26-02-2024 00:03
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+26-02-2024 00:06
+INFO
+Новый пользователь: NeBot100Proz
+--------
+--------
+26-02-2024 00:11
+INFO
+Новый пользователь: NeBot100Proz
+--------

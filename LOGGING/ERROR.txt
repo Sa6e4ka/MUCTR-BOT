@@ -1,0 +1,138 @@
+--------
+2024-02-24T19:02:21.364830+0300
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+2024-02-24T19:02:49.670124+0300
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+2024-02-24T19:34:31.576422+0300
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+2024-02-24T19:34:37.658664+0300
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+2024-02-25T16:25:08.045356+0300
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:12
+ERROR
+Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:13
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:20
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:20
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:20
+ERROR
+Ошибка в запросе к sql: Invalid SQLite URL: sqlite+aiosqlite://database/base.db
+Valid SQLite URL forms are:
+ sqlite:///:memory: (or, sqlite://)
+ sqlite:///relative/path/to/file.db
+ sqlite:////absolute/path/to/file.db
+--------
+--------
+25-02-2024 23:20
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+--------
+--------
+25-02-2024 23:21
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:24
+ERROR
+Ошибка в запросе к sql: Could not parse SQLAlchemy URL from string 'DB_LITE=sqlite+aiosqlite:///database/base.db'
+--------
+--------
+25-02-2024 23:24
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+--------
+--------
+25-02-2024 23:25
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:25
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:25
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+25-02-2024 23:59
+ERROR
+Ошибка в запросе к sql: Invalid SQLite URL: sqlite+aiosqlite://database/base.db
+Valid SQLite URL forms are:
+ sqlite:///:memory: (or, sqlite://)
+ sqlite:///relative/path/to/file.db
+ sqlite:////absolute/path/to/file.db
+--------
+--------
+25-02-2024 23:59
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+--------
+--------
+26-02-2024 00:00
+ERROR
+Ошибка в запросе к sql: (unicode error) 'unicodeescape' codec can't decode bytes in position 23-24: truncated \UXXXXXXXX escape (engine.py, line 5)
+--------
+--------
+26-02-2024 00:00
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+--------
+--------
+26-02-2024 00:00
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
+--------
+26-02-2024 00:01
+ERROR
+КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+--------
