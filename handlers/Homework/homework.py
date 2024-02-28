@@ -47,7 +47,7 @@ async def insert_subject(message: Message, state: FSMContext, session: AsyncSess
         await message.answer('Что-то ты слишком долго думаешь...\n\nЕсли все-таки надумал(а), то воспользуйся командой еще раз!')
         logger.debug(f'Пользователь {message.from_user.username} слишом долго думал при выборе предмета для загрузки домашки')
     except Exception:
-        await message.answer('Похоже, что ты не ввел(а) логин или пароль!\n\nЧтобы посмотреть журнал нужно сначала зарегистрироваться\n\nТыкай сюда --> /start')
+        await message.answer('Похоже, что ты не ввел(а) логин или пароль!\n\nЧтобы загрузить домашку, нужно сначала зарегистрироваться\n\nТыкай сюда --> /start')
         logger.debug(f'Пользователь {message.from_user.username} воспользовался /sethomework, не введя данные')
 
 

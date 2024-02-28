@@ -42,7 +42,7 @@ ur = Router()
 @ur.message(StateFilter(None), CommandStart())
 async def start(message: Message):  
     logger.info(f'Новый пользователь: {message.from_user.username}')
-    await message.answer('Немного формальностей 🙄\n\nСейчас тебе нужно будет ввести логин и пароль от EIOS.\n\n<b>Однако есть небольшие проблемки в их хранении 😅</b>\n\nСкажи, ты согласена(на) с условиями конфиденциальности, написанными на <a href="https://example.com/">сайте бота</a>?', reply_markup=AuthKB.as_markup())
+    await message.answer('Немного формальностей 🙄\n\nСейчас тебе нужно будет ввести логин и пароль от EIOS.\n\n<b>Однако есть небольшие проблемки в их хранении 😅</b>\n\nСкажи, ты согласена(на) с условиями конфиденциальности, написанными на <a href="https://sites.google.com/view/muctr-helper/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">сайте бота</a>?', reply_markup=AuthKB.as_markup())
 
 
 #Пользователь согласен
@@ -55,9 +55,10 @@ async def agree(call: CallbackQuery, state: FSMContext):
 
 #Пользователь не согласен
 @ur.callback_query(F.data == 'Не согласен(на)')
-async def not_agree(call: CallbackQuery):
-    await call.answer()
-    await call.message.answer('Очень жаль 😢\n\nВ таком случае тебе будет доступен не весь функционал бота.\n\nПочему? Можешь прочитать об этом на <a href="https://example.com/">сайте</a>\n\nТы можешь использовать только команды /map и /combo')
+async def not_agree(call: CallbackQuery, state: FSMContext):
+    await state.clear()
+    await call.answer() 
+    await call.message.answer('Очень жаль 😢\n\nВ таком случае тебе будет доступен не весь функционал бота.\n\nПочему? Можешь прочитать об этом на <a href="https://sites.google.com/view/muctr-helper/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">сайте</a>\n\nТы можешь использовать только команды /map, /menu и /setmenu')
 
 
 # Просьба ввести пароль
@@ -124,24 +125,26 @@ async def add_news(message: Message, session: AsyncSession, state: FSMContext, b
         group = await orm_get_user_group(session=session, id=id)
         group_users_list = await orm_get_group_users_list(session=session, group=group)
         await message.answer(text=f'<b>Новость полетела одногруппникам!👇🏿</b>')
-        await state.clear()
+        
     
         content_mapping = {'message.audio': 'message.audio.file_id',
                            'message.photo': 'message.photo[-1].file_id', 
                            'message.video': 'message.video.file_id',
                            'message.voice': 'message.voice.file_id',
-                           'message.document': 'message.document.file_id' }   
+                           'message.document': 'message.document.file_id',
+                            'message.sticker' : 'message.sticker.file_id'}   
         content = content_mapping.keys()
         for user_id in group_users_list:
-            for i in content:
-                if eval(i):
-                    send_methot =getattr(bot, f'send_{i.split('.')[-1]}')
-                    await send_methot(user_id, eval(content_mapping[i]), caption=f'<code>Новость от старосты</code>')
-                    break
-                else:
-                    await bot.send_message(user_id, f'<code>Новость от старосты:\n\n{message.text}</code>')
-                    break
-       
+            if not message.text:
+                for i in content:
+                    if eval(i):
+                        send_methot =getattr(bot, f'send_{i.split('.')[-1]}')
+                        await send_methot(user_id, eval(content_mapping[i]), caption=f'<code>Новость от старосты</code>')  
+                        await state.clear()
+                        break
+            else:
+                await bot.send_message(user_id, f'<code>Новость от старосты:</code>\n\n{message.text}')
+                await state.clear()
     except TimeoutError:
         logger.debug(f'Староста ({message.from_user.username}) слишком долго не загружала новость')
         await message.answer('Что-то долго ты думаешь, староста...')

@@ -2,8 +2,7 @@
 import os
 import asyncio
 from LOGGING.LoggerConfig import logger
-import datetime
-import schedule
+
 
 # Импортируем нужные модули из aiogram
 from aiogram import Bot, Dispatcher, F
@@ -47,7 +46,7 @@ dp = Dispatcher()
 from middlewares.db import DataBaseSession
 
 #Подключаем к диспетчеру все роутеры из содаваемых хендлеров.   
-dp.include_routers(jr ,sr, cr, hr, ur, er, ar,) 
+dp.include_routers(jr ,sr, cr, hr, ur, ar, er,) 
 
 
 # Добавляем основные "глобальные" хендлеры

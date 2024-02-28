@@ -18,5 +18,5 @@ class Admin_filt(Filter):
                 await state.clear()
                 return False
             else:
-                return True
+                return False
 

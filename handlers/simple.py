@@ -19,19 +19,10 @@ sr = Router()
 # Обработчик команды /map
 @sr.message(StateFilter(None, MapState), Command('map'))
 async def choose_floor_miusi(message: types.Message, state: FSMContext):
-    await message.answer(text='Выбери этаж Миусского комплекса',reply_markup=inline.korpus_mapKB.as_markup())
+    await message.answer(text='Выбери корпус, карту которого хотел(а) бы посмотреть',reply_markup=inline.korpus_mapKB.as_markup())
     await state.set_state(MapState.Choose)
 
-# Обработчик снятия состояния
-# @sr.message(MapState.Choose, F.text.startswith('/'))
-# async def sethomework(message: types.Message, state: FSMContext):
-#     current_state = await state.get_state()
-#     logger.info(f'Пользователь {message.from_user.username} ввел команду в состоянии выбора карты')
-#     if current_state is not None:
-#         await state.clear()
-#         await message.answer(
-#             'Похоже, что ты ошибся(лась) командой.\n\nПросто введи нужную тебе команду.'
-#         )
+
 # Если пользователь выбрал посмотреть карту Миус
 @sr.callback_query(StateFilter(MapState.Choose), F.data == 'Miusi')
 async def show_floor_miusi(call: types.CallbackQuery, state : FSMContext):
@@ -74,7 +65,7 @@ async def show_floor_miusi(call: types.CallbackQuery, state : FSMContext):
 @sr.callback_query(F.data.startswith('T_'))
 async def show_floor_miusi(call: types.CallbackQuery, bot: Bot):
     data = call.data.split('_')[1]
-    floor_list = ['1 этаж', '2 этаж','3 этаж','4 этаж','5 этаж','5 этаж','7 этаж','8 этаж','9 этаж']
+    floor_list = ['1 этаж', '2 этаж','3 этаж','4 этаж','5 этаж','6 этаж','7 этаж','8 этаж','9 этаж']
     url_list = [
         'https://sun1-56.userapi.com/impg/Fm1CswDj95h5n__7GEbngVjiD-k_kvRaAvs2zA/O1yeNUA0Bo0.jpg?size=604x587&quality=96&sign=6ca15074d424c8c6f312b40fa3e4a928&type=album',
         'https://sun1-85.userapi.com/impg/TGBCUAiaqfWRR4g3HTPTEzK_uvasObcjIIDUDw/QJsZFc1Y5Ao.jpg?size=571x604&quality=96&sign=dbe7bbc171b51568fcdee57ee8147759&type=album',

@@ -10,13 +10,13 @@ ar = Router()
 
 ar.message.filter(Admin_filt(6592529444))
 
-@ar.message(StateFilter(None), Command('DROPDATABASE'))
+@ar.message(Command('DROPDATABASE'))
 async def drop(message: Message):
     await drop_db()
     logger.error('БАЗА ДАННЫХ ПОЛНОСТЬЮ ОЧИЩЕНА')
     await message.answer('База данных полностью очищена!')
 
-@ar.message(StateFilter(None), Command('loggs'))
+@ar.message(Command('loggs'))
 async def send_loggs(message: Message):
         file_list = ['LOGGING/DEBUG.txt','LOGGING/ERROR.txt']
         for file in file_list:

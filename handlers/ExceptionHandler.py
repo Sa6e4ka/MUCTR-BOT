@@ -36,7 +36,6 @@ commaddict = {
     '/loggs' : 'send_loggs(message)',
     '/DROPDATABASE' : 'drop(message)'
 }
-
 @er.message(StateFilter('*'), F.text)
 async def exc(message: Message, state: FSMContext, session: AsyncSession):
     current_state = await state.get_state()
@@ -51,4 +50,4 @@ async def exc(message: Message, state: FSMContext, session: AsyncSession):
         if message.text not in commaddict.keys():
             await message.answer(text=f'<b>Извини, но такой команды не существует</b>\n\nЛучше воспользуйся менюшкой слева')
         else:
-            pass       
+            await state.clear()      
