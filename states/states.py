@@ -3,11 +3,11 @@ from aiogram.fsm.state import State, StatesGroup
 # Состояние для загрузки комбо-обеда
 class СomboState(StatesGroup):
     compound = State()
-    price = State()
 
 # Состояние для загрузки домашнего задания
 class HomeworkState(StatesGroup):
     subject = State()
+    caption = State()
     task = State()
 
 # Состояние для просмотра журнала
@@ -33,4 +33,4 @@ class SignUpState(StatesGroup):
 class AnnounceState(StatesGroup):
     announcement = State()
 
-StateTouple = (СomboState.compound ,СomboState.price, HomeworkState.subject ,HomeworkState.task, JournalState, MapState, SignUpState, AnnounceState)      
+     

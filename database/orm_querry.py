@@ -71,23 +71,21 @@ async def orm_get_identifiers(session: AsyncSession, id):
 
 async def orm_add_combo(session: AsyncSession , data: dict):
     table = combo(
-        compound = data['compound'],
-        price = data['price']
+        compound = data,
     )
     session.add(table)
     await session.commit()
 
 async def orm_get_combo_comp(session: AsyncSession):
     querry = select(combo.compound).order_by(combo.id.desc()).limit(1)
-    querry2 = select(combo.price).order_by(combo.id.desc()).limit(1)
-
     result = await session.execute(querry)
-    result2 = await session.execute(querry2)
-
     compound = result.scalars().first()
-    price = result2.scalars().first()
 
-    return compound, price
+    return compound
+
+async def orm_clear_combo(session: AsyncSession):
+    await session.execute(delete(combo))
+    await session.commit()
 
 ######################################################################################################
 
@@ -96,7 +94,8 @@ async def orm_add_homework(session: AsyncSession, data: dict):
         subject = data['subject'],
         task = data['task'],
         group = data['group'],
-        ContentType = data['Ctype']
+        ContentType = data['Ctype'],
+        Caption = data['caption']
     )
     session.add(obj)
     await session.commit()
@@ -110,6 +109,7 @@ async def orm_get_homework(session: AsyncSession, subject, group):
 
     task = scl.task
     ContentType = scl.ContentType
-    return task, ContentType
+    caption = scl.Caption
+    return task, ContentType, caption
     
 ######################################################################################################

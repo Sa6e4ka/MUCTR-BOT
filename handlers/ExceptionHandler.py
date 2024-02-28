@@ -10,12 +10,13 @@ import asyncio
 from LOGGING.LoggerConfig import logger
 from states.states import *
 
-from handlers.Combo import setcombo
-from handlers.Admin import *
-from handlers.Journal.Journal import journal
-from handlers.Homework.Homework import choose_viewhomework, insert_subject
-from handlers.Simple import choose_floor_miusi, schedule
-from handlers.UserSave.UserSave import start
+from handlers.menu import setmenu, view_menu
+from handlers.admin import send_loggs, drop
+from handlers.Journal.journal import journal
+from handlers.Homework.homework import choose_viewhomework, insert_subject
+from handlers.simple import choose_floor_miusi, schedule
+from handlers.UserSave.UserSave import start, an
+
 
 
 
@@ -28,11 +29,15 @@ commaddict = {
     '/sethomework' : 'insert_subject(message, state, session)',
     '/journal' : 'journal(message, session, state)',
     '/map'  : 'choose_floor_miusi(message, state)',
-    '/combo'  : 'setcombo(message, state)',
-    '/schedule' : 'schedule(message, session)'
+    '/setmenu' : 'setmenu(message, state)',
+    '/menu'  : 'view_menu(message, session)',
+    '/schedule' : 'schedule(message, session)',
+    '/an' : 'an(message, state)',
+    '/loggs' : 'send_loggs(message)',
+    '/DROPDATABASE' : 'drop(message)'
 }
 
-@er.message(StateFilter('*'), F.text.startswith('/'))
+@er.message(StateFilter('*'), F.text)
 async def exc(message: Message, state: FSMContext, session: AsyncSession):
     current_state = await state.get_state()
     if current_state is not None:

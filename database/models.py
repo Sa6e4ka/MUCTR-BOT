@@ -13,14 +13,14 @@ class homework(Base):
     task: Mapped[str] = mapped_column(Text(500))
     group: Mapped[str] = mapped_column(Text(10))
     ContentType: Mapped[str] = mapped_column(Text(30))
+    Caption : Mapped[str] = mapped_column(Text(30))
 
 
 class combo(Base):
     __tablename__ = 'combo'
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
-    compound: Mapped[int] = mapped_column(Text(500))
-    price: Mapped[str] = mapped_column(Text(100))
+    compound: Mapped[int] = mapped_column(Text(1000))
 
 
 class usertable(Base):

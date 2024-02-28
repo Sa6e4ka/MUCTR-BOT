@@ -1,6 +1,6 @@
-# Игнорируем переменные окружения
 *.env
-*.log
-.vscode/
-.__pycache__/
-.venv/
+JSON/
+venv/
+*/__pycache__/
+LOGGING/*.txt
+database/*.db

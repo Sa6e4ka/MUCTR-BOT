@@ -18,14 +18,6 @@ from LOGGING.LoggerConfig import logger
 #Homework Router
 hr = Router()
 
-
-# @hr.message(StateFilter(HomeworkState.subject, HomeworkState.task), F.text.startswith('/'))
-# async def cancel(message: Message, state: FSMContext):
-#         await state.clear()
-#         await message.answer(text=f'<b>Похоже, что ты по ошибке ввел(а) не ту команду</b>.\nИспользуй нужную тебе команду')
-#         logger.info(f'Пользователь {message.from_user.username} решил воспользоваться другой командой в состоянии ввода домашки')
-
-
 @hr.message(StateFilter(None), Command('sethomework'))
 async def insert_subject(message: Message, state: FSMContext, session: AsyncSession):
     try:
@@ -39,8 +31,8 @@ async def insert_subject(message: Message, state: FSMContext, session: AsyncSess
         first_sem = ["September", "October", "November", "December"]
         second_sem = ["January", "February", "March", "April", "May", "June"]
 
-        if course not in range(1, 5):
-            await message.answer('Прости бро, но для магистратуры эта функция пока что недоступна, потому что в этом нет нужды.\n\nЕсли хочешь пользоваться ей на постоянке, то обязательно напиши мне:\n@NeBot100Proz')
+        if course not in range(1, 4):
+            await message.answer('Прости бро, но для магистратуры эта функция пока что недоступна\n\nЕсли хочешь пользоваться ей на постоянке, то обязательно напиши мне:\n@NeBot100Proz')
         elif current_month in first_sem:
             kbd = homework_keyboard(SubjectList=response[2][(course - 1) * 2], type='s')
             await message.answer(text='Выбери предмет, по которому хочешь загрузить домашку', reply_markup=kbd)
@@ -79,6 +71,7 @@ async def sethomework(call: CallbackQuery, state: FSMContext, session: AsyncSess
             )
             await state.set_state(HomeworkState.task)
         except Exception:
+            logger.info(f'Пользователю {call.message.from_user.username} выдало ошибку во время ввода дз (функция sethomework)')
             await call.message.answer('Похоже, что возникла какая-то ошибка :(\n\nОбязательно обратись к @Nebot100proz')
     else:
         logger.info(f'Пользователю {call.message.from_user.username} выдало ошибку во время ввода дз из-за несоответствия chat id')
@@ -86,34 +79,82 @@ async def sethomework(call: CallbackQuery, state: FSMContext, session: AsyncSess
         await state.clear()
 
 
-@hr.message(HomeworkState.task, or_f(F.text, F.photo, F.audio, F.voice, F.video, F.document, F.sticker))
-async def done(message: Message, state: FSMContext, session: AsyncSession):
+@hr.message(StateFilter(HomeworkState.task), or_f(F.text, F.photo, F.audio, F.voice, F.video, F.document, F.sticker))
+async def task(message: Message, state: FSMContext, session: AsyncSession):
     state_data = await state.get_data()
 
-    content_type_mapping = {
-        'text': ('text', message.text),
-        'photo': ('photo', message.photo[-1].file_id if message.photo else None),
-        'audio': ('audio', message.audio.file_id if message.audio else None),
-        'voice': ('voice', message.voice.file_id if message.voice else None),
-        'video': ('video', message.video.file_id if message.video else None),
-        'document': ('document', message.document.file_id if message.document else None),
-        'sticker': ('sticker', message.sticker.file_id if message.sticker else None),
-    }
-
     if message.chat.id == state_data['chat_id']:
-        try:
-            group = await orm_get_user_group(session=session, id=message.chat.id)
-            for content_type,(attribute, file_id) in content_type_mapping.items():
-                if file_id:
-                    await state.update_data(task=file_id, group=group, Ctype=content_type)
-                    break
-            await message.answer(
-                text=f'Домашнее задание по предмету <code>{state_data['subject']}</code> успешно сохранено!\n\nТеперь ты и твои одногруппники могут посмотреть или изменить его в любой момент!\n/viewhomework'
-            )
-
+        group = await orm_get_user_group(session=session, id=message.chat.id)
+        if message.text:
+            await state.update_data(task = message.text, group=group, Ctype = 'text', caption= '')
             HW_data = await state.get_data()
             await orm_add_homework(session=session, data=HW_data)
+            await message.answer(f'Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await state.clear()
+        elif message.voice:
+            await state.update_data(task = message.voice.file_id, group=group, Ctype = 'voice', caption= '')
+            HW_data = await state.get_data()
+            await orm_add_homework(session=session, data=HW_data)
+            await message.answer(f'Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await state.clear()
+        elif message.audio:
+            await state.update_data(task = message.audio.file_id, group=group, Ctype = 'audio', caption= '')
+            HW_data = await state.get_data()
+            await orm_add_homework(session=session, data=HW_data)
+            await message.answer(f'Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await state.clear()
+        elif message.sticker:
+            await state.update_data(task = message.sticker.file_id, group=group, Ctype = 'sticker', caption= '')
+            HW_data = await state.get_data()
+            await orm_add_homework(session=session, data=HW_data)
+            await message.answer(f'Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await state.clear()
+        elif message.photo:
+            await state.update_data(task = message.photo[-1].file_id, group=group, Ctype = 'photo')
+            await message.answer(f'<b>Теперь введи описание к фото\n\nЕсли не нужно описание - введи /empty</b>')
+            await state.set_state(HomeworkState.caption)
+        elif message.video:
+            await state.update_data(task = message.video.file_id, group=group, Ctype = 'video')
+            await message.answer(f'<b>Теперь введи описание к видео\n\nЕсли не нужно описание - введи /empty</b>')
+            await state.set_state(HomeworkState.caption)
+        elif message.document:
+            await state.update_data(task = message.document.file_id, group=group, Ctype = 'document')
+            await message.answer(f'<b>Теперь введи описание к документу\n\nЕсли не нужно описание - введи /empty</b>')
+            await state.set_state(HomeworkState.caption)
+    else:
+        logger.info(f'Пользователю {message.from_user.username} выдало ошибку во время ввода дз из-за несоответствия chat id')
+        await message.answer('Боюсь, что кто-то другой начал вводить домашнее задание раньше тебя :(\n\nПопробуй чуть позже /sethomework')
+        await state.clear()
 
+@hr.message(HomeworkState.caption, Command('empty'))
+async def empty(message: Message, state: FSMContext, session: AsyncSession):
+    state_data = await state.get_data()
+    if message.chat.id == state_data['chat_id']:
+        try:
+            await state.update_data(caption = '')
+            HW_data = await state.get_data()
+            await orm_add_homework(session=session, data=HW_data)
+            await message.answer(f'Домашнее задание по предмету <b>{HW_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await state.clear()
+        except TimeoutError:
+            logger.debug(f'Пользователь {message.from_user.username} слишком долго не вводил домашнее задание')
+            await message.answer('Что-то ты слишком долго думаешь...\n\nЕсли все-таки надумал(а), то воспользуйся командой еще раз!')
+            await state.clear()
+    else:
+        logger.info(f'Пользователю {message.from_user.username} выдало ошибку во время ввода дз из-за несоответствия chat id')
+        await message.answer('Боюсь, что кто-то другой начал вводить домашнее задание раньше тебя :(\n\nПопробуй чуть позже /sethomework')
+        await state.clear()
+
+       
+@hr.message(HomeworkState.caption, F.text)
+async def caption_func(message: Message, state: FSMContext, session: AsyncSession):
+    state_data = await state.get_data()
+    if message.chat.id == state_data['chat_id']:
+        try:
+            await state.update_data(caption=message.text)
+            HW_data = await state.get_data()
+            await orm_add_homework(session=session, data=HW_data)
+            await message.answer(f'Домашнее задание по предмету <b>{HW_data['subject']}</b> успешно загружено!\n\nПосмотреть его можно по команде /viewhomework!')
             await state.clear()
         except TimeoutError:
             logger.debug(f'Пользователь {message.from_user.username} слишком долго не вводил домашнее задание')
@@ -178,19 +219,27 @@ async def viewhomework(call: CallbackQuery, session: AsyncSession):
     try:
         call_data = call.data.split('_')[1]
         group = await orm_get_user_group(session=session, id=call.message.chat.id)
-
         homework = await orm_get_homework(session= session, subject= dict[call_data], group=group)
-      
         task = homework[0]
         ctype = homework[1]
+        caption = homework[2]
         response_method = response_methods.get(ctype)
-        if ctype != 'text':
-            await call.answer()
-            await response_method(caption=f'Последнее домашнее задание по предмету\n<b>{dict[call_data]}</b>', **{ctype:task})
-        else:
+        if ctype == 'text':
             await call.answer()
             await call.message.answer(text=f'Последнее домашнее задание по предмету\n<b>{dict[call_data]}</b>\n\n{task}')
+        elif ctype == 'audio':
+            await call.answer()
+            await response_method(caption = f'Последнее домашнее задание по предмету\n<b>{dict[call_data]}</b>', **{ctype:task})
+        elif ctype == 'voice':
+            await call.answer()
+            await response_method(caption = f'Последнее домашнее задание по предмету\n<b>{dict[call_data]}</b>', **{ctype:task})
+        else:
+            if caption != '':
+                await call.answer()
+                await response_method(caption=f'Последнее домашнее задание по предмету\n<b>{dict[call_data]}</b>\n\n<b>Описание:</b>\n\n{caption}', **{ctype:task})
+            else:
+                await call.answer()
+                await response_method(caption=f'Последнее домашнее задание по предмету\n<b>{dict[call_data]}</b>', **{ctype:task})
     except Exception as e:
-        logger.debug(f'{e}')
         await call.message.answer('Похоже, что задание по этому предмету еще не добавили :(\n\nБудь первым! --> /sethomework')
     

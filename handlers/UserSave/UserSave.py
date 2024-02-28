@@ -42,10 +42,8 @@ ur = Router()
 @ur.message(StateFilter(None), CommandStart())
 async def start(message: Message):  
     logger.info(f'Новый пользователь: {message.from_user.username}')
-    await message.answer(
-        text=f'Привет, это бот Mendeleev!\n\nС моей помощью ты с можешь загрузить и посмотреть домашку по любому предмету, посмотреть свои баллы из EIOS и многое другое 😈\n\nПеред тем как начать, тебе нужно будет зарегистрироваться (ввести логин и пароль от EIOS)\n\n<b>Крайне настоятельно советую тебе почитать политику конфиденициальности на</b> <a href="https://example.com/">этом сайте</a> \n\nТакже на нем есть небольшой мануальчик по использованию бота 😉')
-    await asyncio.sleep(5)
-    await message.answer('Скажи, ты согласена(на) с условиями конфиденциальности, написанныи на <a href="https://example.com/">сайте бота</a>?', reply_markup=AuthKB.as_markup())
+    await message.answer('Немного формальностей 🙄\n\nСейчас тебе нужно будет ввести логин и пароль от EIOS.\n\n<b>Однако есть небольшие проблемки в их хранении 😅</b>\n\nСкажи, ты согласена(на) с условиями конфиденциальности, написанными на <a href="https://example.com/">сайте бота</a>?', reply_markup=AuthKB.as_markup())
+
 
 #Пользователь согласен
 @ur.callback_query(F.data == 'Согласен(на)')
@@ -54,21 +52,31 @@ async def agree(call: CallbackQuery, state: FSMContext):
     await call.message.answer('Отлично!\n\n<b>Тогда введи логин от портала EIOS:</b>')
     await state.set_state(SignUpState.Identify)
 
+
 #Пользователь не согласен
 @ur.callback_query(F.data == 'Не согласен(на)')
-async def agree(call: CallbackQuery):
+async def not_agree(call: CallbackQuery):
     await call.answer()
     await call.message.answer('Очень жаль 😢\n\nВ таком случае тебе будет доступен не весь функционал бота.\n\nПочему? Можешь прочитать об этом на <a href="https://example.com/">сайте</a>\n\nТы можешь использовать только команды /map и /combo')
 
 
 # Просьба ввести пароль
 @ur.message(StateFilter(SignUpState.Identify), F.text)
-async def SavLog(message: Message, state: FSMContext): 
-    await state.update_data(username = message.from_user.username, 
-                            chat_id = message.chat.id,
-                            login = message.text)    
-    await message.answer(text='Спасибо!\n\nТеперь введи пароль:')
-    await state.set_state(SignUpState.password)
+async def SaveLog(message: Message, state: FSMContext):
+    if len(message.text) == 6 and message.text.isdigit():
+        await state.update_data(username = message.from_user.username, 
+                                chat_id = message.chat.id,
+                                login = message.text)    
+        await message.answer(text='Спасибо!\n\n<b>Теперь введи пароль:</b>')
+        await state.set_state(SignUpState.password)
+    else:
+        await state.clear()
+        await message.answer(f'{message.from_user.username}<b>, пожалуйста, введи логин правильно!</b>')
+        await state.set_state(SignUpState.Identify)
+        await state.update_data(username = message.from_user.username, 
+                                chat_id = message.chat.id,
+                                login = message.text)   
+
 
 # Добавление пользователя в базу данных
 @ur.message(StateFilter(SignUpState.password), F.text)
@@ -82,11 +90,13 @@ async def SavPas(message: Message, state: FSMContext, session: AsyncSession):
         await state.update_data(group = group, password = encrypted_password, key=key)
         f_data = await state.get_data()
         await orm_add_user(session=session,data=f_data)
-        await message.answer('Твои данные успешно сохранены и зашифрованы!')
+        await message.answer('Твой логин успешно сохранен, а пароль даже зашифрован 🤓')
         await state.clear()
+        await asyncio.sleep(1)
+        await message.answer('<b>НЕБОЛЬШОЙ МАНУАЛЬЧИК</b>\n\nТеперь ты можешь загрузить домашку для своих одногруппников\n👉🏿 /sethomework\n\nEсли кто-то другой загрузил ее раньше тебя, ты уже можешь ее посмотреть\n👉🏿 /viewhomework\n\nЧто бы посмотреть баллы из журнала EIOS тыкай сюда\n👉🏿 /journal\n\n<b>Остальные функции смотри в менюшке слева</b>')
     except Exception as e:
         logger.debug(f'Пользователь {message.from_user.username} неправильно ввел данные: {e}')
-        await message.answer('Похоже, что ты опять ввел(а) неверные логин или пароль😭\n\nПопробуй еще раз --> /start')
+        await message.answer('Похоже, что ты ввел(а) неверные логин или пароль😭\n\nПопробуй еще раз --> /start')
         await state.clear()
             
 """
@@ -102,7 +112,7 @@ async def SavPas(message: Message, state: FSMContext, session: AsyncSession):
 
 # Обработчик команды /an для ввода новости
 @ur.message(StateFilter(None), Command('an'))
-async def an(message: Message, session: AsyncSession, state: FSMContext):
+async def an(message: Message, state: FSMContext):
     await message.answer(text='Введи новость:')
     await state.set_state(AnnounceState.announcement)
 
@@ -116,7 +126,11 @@ async def add_news(message: Message, session: AsyncSession, state: FSMContext, b
         await message.answer(text=f'<b>Новость полетела одногруппникам!👇🏿</b>')
         await state.clear()
     
-        content_mapping = {'message.audio': 'message.audio.file_id','message.photo': 'message.photo[-1].file_id', 'message.video': 'message.video.file_id','message.voice': 'message.voice.file_id','message.document': 'message.document.file_id' }   
+        content_mapping = {'message.audio': 'message.audio.file_id',
+                           'message.photo': 'message.photo[-1].file_id', 
+                           'message.video': 'message.video.file_id',
+                           'message.voice': 'message.voice.file_id',
+                           'message.document': 'message.document.file_id' }   
         content = content_mapping.keys()
         for user_id in group_users_list:
             for i in content:

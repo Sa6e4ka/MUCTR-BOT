@@ -1,138 +1,85 @@
 --------
-2024-02-24T19:02:21.364830+0300
+28-02-2024 15:05
 ERROR
-Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
 --------
-2024-02-24T19:02:49.670124+0300
+28-02-2024 15:08
 ERROR
-Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
 --------
-2024-02-24T19:34:31.576422+0300
+28-02-2024 15:10
 ERROR
-Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
 --------
-2024-02-24T19:34:37.658664+0300
+28-02-2024 15:10
 ERROR
-Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой /setmenu\ не будучи админом!
 --------
 --------
-2024-02-25T16:25:08.045356+0300
+28-02-2024 15:11
 ERROR
-Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
 --------
-25-02-2024 23:12
+28-02-2024 15:12
 ERROR
-Бот лег! Ошибка: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой /setmenu не будучи админом!
 --------
 --------
-25-02-2024 23:13
+28-02-2024 15:12
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой /setmenu не будучи админом!
 --------
 --------
-25-02-2024 23:20
+28-02-2024 15:12
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой /map не будучи админом!
 --------
 --------
-25-02-2024 23:20
+28-02-2024 15:13
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
 --------
-25-02-2024 23:20
+28-02-2024 15:15
 ERROR
-Ошибка в запросе к sql: Invalid SQLite URL: sqlite+aiosqlite://database/base.db
-Valid SQLite URL forms are:
- sqlite:///:memory: (or, sqlite://)
- sqlite:///relative/path/to/file.db
- sqlite:////absolute/path/to/file.db
+Пользователь PurpleguyDX воспользовался командой sklfjjhdfkjhdfghdfgh не будучи админом!
 --------
 --------
-25-02-2024 23:20
+28-02-2024 15:16
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+Пользователь PurpleguyDX воспользовался командой skjfhdlkfjhdlfkjhdht не будучи админом!
 --------
 --------
-25-02-2024 23:21
+28-02-2024 15:17
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой asjdfaksjdhgfkasjdgfasf не будучи админом!
 --------
 --------
-25-02-2024 23:24
+28-02-2024 15:17
 ERROR
-Ошибка в запросе к sql: Could not parse SQLAlchemy URL from string 'DB_LITE=sqlite+aiosqlite:///database/base.db'
+Пользователь PurpleguyDX воспользовался командой /dfllgsldfkjgsfdh не будучи админом!
 --------
 --------
-25-02-2024 23:24
+28-02-2024 15:18
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
 --------
-25-02-2024 23:25
+28-02-2024 15:20
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
 --------
-25-02-2024 23:25
+28-02-2024 15:23
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
 --------
-25-02-2024 23:25
+28-02-2024 15:24
 ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
---------
---------
-25-02-2024 23:59
-ERROR
-Ошибка в запросе к sql: Invalid SQLite URL: sqlite+aiosqlite://database/base.db
-Valid SQLite URL forms are:
- sqlite:///:memory: (or, sqlite://)
- sqlite:///relative/path/to/file.db
- sqlite:////absolute/path/to/file.db
---------
---------
-25-02-2024 23:59
-ERROR
-КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
---------
---------
-26-02-2024 00:00
-ERROR
-Ошибка в запросе к sql: (unicode error) 'unicodeescape' codec can't decode bytes in position 23-24: truncated \UXXXXXXXX escape (engine.py, line 5)
---------
---------
-26-02-2024 00:00
-ERROR
-КРИТИЧЕСКАЯ ОШИБКА: name 'session_maker' is not defined
---------
---------
-26-02-2024 00:00
-ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
---------
---------
-26-02-2024 00:01
-ERROR
-КРИТИЧЕСКАЯ ОШИБКА: (sqlite3.OperationalError) unable to open database file
-(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Пользователь PurpleguyDX воспользовался командой None не будучи админом!
 --------
