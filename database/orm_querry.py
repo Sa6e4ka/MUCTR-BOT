@@ -12,7 +12,7 @@ async def orm_add_user(session: AsyncSession, data:dict):
         query = update(usertable).where(usertable.chat_id == data['chat_id']).values(data)
         await session.execute(query)
         await session.commit() 
-        logger.info(f'Пользователь успешно {data['username']} сменил свои данные!')
+        logger.info(f"Пользователь успешно {data['username']} сменил свои данные!")
     except:
         table = usertable(
             username = data['username'],
@@ -22,7 +22,7 @@ async def orm_add_user(session: AsyncSession, data:dict):
             password = data['password'],
             key = data['key']
         )
-        logger.info(f'Пользователь {data['username']} успешно прошел регистрацию!')
+        logger.info(f"Пользователь {data['username']} успешно прошел регистрацию!")
         session.add(table)
         await session.commit()
    

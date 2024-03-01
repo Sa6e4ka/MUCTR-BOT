@@ -17,14 +17,6 @@ from LOGGING.LoggerConfig import logger
 # Journal Router
 jr = Router()
 
-
-# @jr.message(StateFilter(JournalState.journal, JournalState.Subject), F.text.startswith('/'))
-# async def stop(message: types.Message, state: FSMContext):
-#     await state.clear()
-#     await message.answer(f'Решил(а) воспользоваться другой комадой?\nДа без проблем!\nТыкай сюда --> {message.text}')
-#     logger.info(f'Пользователь {message.from_user.username} решил воспользоваться другой командой в состоянии просмотра журнала.')
-
-
 @jr.message(StateFilter(None), Command('journal'))
 async def journal(message: types.Message, session: AsyncSession, state: FSMContext):
     try:

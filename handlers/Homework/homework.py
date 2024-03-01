@@ -89,25 +89,25 @@ async def task(message: Message, state: FSMContext, session: AsyncSession):
             await state.update_data(task = message.text, group=group, Ctype = 'text', caption= '')
             HW_data = await state.get_data()
             await orm_add_homework(session=session, data=HW_data)
-            await message.answer(f'Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await message.answer(f"Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!")
             await state.clear()
         elif message.voice:
             await state.update_data(task = message.voice.file_id, group=group, Ctype = 'voice', caption= '')
             HW_data = await state.get_data()
             await orm_add_homework(session=session, data=HW_data)
-            await message.answer(f'Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await message.answer(f"Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!")
             await state.clear()
         elif message.audio:
             await state.update_data(task = message.audio.file_id, group=group, Ctype = 'audio', caption= '')
             HW_data = await state.get_data()
             await orm_add_homework(session=session, data=HW_data)
-            await message.answer(f'Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await message.answer(f"Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!")
             await state.clear()
         elif message.sticker:
             await state.update_data(task = message.sticker.file_id, group=group, Ctype = 'sticker', caption= '')
             HW_data = await state.get_data()
             await orm_add_homework(session=session, data=HW_data)
-            await message.answer(f'Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await message.answer(f"Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!")
             await state.clear()
         elif message.photo:
             await state.update_data(task = message.photo[-1].file_id, group=group, Ctype = 'photo')
@@ -134,7 +134,7 @@ async def empty(message: Message, state: FSMContext, session: AsyncSession):
             await state.update_data(caption = '')
             HW_data = await state.get_data()
             await orm_add_homework(session=session, data=HW_data)
-            await message.answer(f'Домашнее задание по предмету <b>{HW_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await message.answer(f"Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!")
             await state.clear()
         except TimeoutError:
             logger.debug(f'Пользователь {message.from_user.username} слишком долго не вводил домашнее задание')
@@ -154,7 +154,7 @@ async def caption_func(message: Message, state: FSMContext, session: AsyncSessio
             await state.update_data(caption=message.text)
             HW_data = await state.get_data()
             await orm_add_homework(session=session, data=HW_data)
-            await message.answer(f'Домашнее задание по предмету <b>{HW_data['subject']}</b> успешно загружено!\n\nПосмотреть его можно по команде /viewhomework!')
+            await message.answer(f"Домашнее задание по предмету <b>{state_data['subject']}</b> успешно сохранено!\n\nПосмотреть его можно по команде /viewhomework!")
             await state.clear()
         except TimeoutError:
             logger.debug(f'Пользователь {message.from_user.username} слишком долго не вводил домашнее задание')
