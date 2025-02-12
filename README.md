@@ -1,2 +1,2 @@
 # MUCTR-BOT
-Bot-helper for MUCTR
+Bot-helper for students of MUCTR
